@@ -20,7 +20,7 @@ public class Offer29 {
         int length = array.length;
         if(length ==2){
             num1[0] = array[0];
-            num2[0] = array[0];
+            num2[0] = array[1];
         }
         int bitResult = 0;
         for(int i=0;i<length;i++){
