@@ -18,6 +18,7 @@ public class Offer33 {
             if(total == sum){
                 arrayList.add(array[left]);
                 arrayList.add(array[right]);
+                return arrayList;
             } else if(total >sum){
                 right--;
             } else {
