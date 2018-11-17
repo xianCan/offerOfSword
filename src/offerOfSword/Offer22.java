@@ -19,6 +19,7 @@ public class Offer22 {
         for (int i = 0; i < k; i++) {
             res.add(input[i]);
         }
+
         return res;
     }
 }
