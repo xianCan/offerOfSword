@@ -26,6 +26,7 @@ public class Offer21 {
             }
             if(temp>array.length/2)return array[i];
         }
+
         return 0;
     }
 }
