@@ -14,11 +14,16 @@ import java.util.Map;
  */
 public class Offer41 {
     public boolean duplicate(int numbers[],int length,int [] duplication) {
+        //非空判断
         if(numbers==null || length<=0 || numbers.length!=length)return false;
         Map<Integer,Integer> map = new HashMap<>();
+        //遍历数组
         for(int i=0;i<numbers.length;i++){
+            //从map中取出来
             Integer integer = map.get(numbers[i]);
+            //如果为空，则代表第一次存进去
             if(integer==null)map.put(numbers[i],1);
+            //如果出现一次，则直接返回
             else if(integer==1) {
                 duplication[0] = numbers[i];
                 return true;
