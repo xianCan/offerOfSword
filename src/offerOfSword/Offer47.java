@@ -16,15 +16,22 @@ package offerOfSword;
 public class Offer47 {
     public ListNode deleteDuplication(ListNode pHead){
         if(pHead==null || pHead.next==null)return pHead;
+        //新建一个头节点指向原有的头节点
         ListNode first = new ListNode(-1);
+        //last作为前一个节点，专门用于指向下一个不重复的节点
         ListNode last = first;
+        //pHead作为当前节点
         first.next = pHead;
         while(pHead != null && pHead.next != null){
+            //如果当前节点和下一个节点的值相同，准备前移
             if(pHead.val == pHead.next.val){
                 int val = pHead.val;
+                //往前遍历，直到找到不再重复的节点
                 while (pHead!=null && pHead.val == val)pHead = pHead.next;
+                //last指向不重复节点
                 last.next=pHead;
             }
+            //如果不重复，直接用last指向当前节点
             else {
                 last = pHead;
                 pHead = pHead.next;
