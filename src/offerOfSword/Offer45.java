@@ -37,11 +37,3 @@ public class Offer45 {
         return null;
     }
 }
-
-class ListNode {
-    int val;
-    ListNode next = null;
-    ListNode(int val) {
-        this.val = val;
-    }
-}
